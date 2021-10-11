@@ -14,9 +14,9 @@ body{
      font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
      width: auto; height: auto;
         }
-    /*Style*/
+    /*Style*/ 
     }
-    
+       
     /*Tablet(medium)*/
     @media screen and (min-width : 768px) and (max-width : 1023px){
          body {
