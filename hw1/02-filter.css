@@ -1,1 +1,101 @@
-/* Add your code here */
+
+    /* Filter from css provides the graphics styles like blur,grayscale,etc images  -->
+    <!--  img.filtername: This applies the different filter properties to the img elements
+    the following filters are used for the images:
+    grayscale(),blur(),invert(),sepia(),brightness(),saturation() and
+     variousfilters() like Drop-shadow, opacity(),contrast(),hue-roate,opacity and 
+     different filters like opacity,saturate&brightness appiled together on image
+    -->	
+    <!--  grid-container
+    display:grid; this commands will set the grid 
+    grid-template-columns:-  sets number of columns reguired:auto ->3 times gives 3 columns
+    background-color:-> sets the backgroud to white in this case.
+    padding gives the border thickness.
+      -->
+    
+    <!-- 
+    grid-item:
+    assigned the following properties for the items in the grid:
+    backgroundcolor sets the color for items
+    padding sets the border width
+    font-size is for the text
+    text-align keeps items to the center
+     */
+    
+    
+    
+      img.grayscale {
+        -webkit-filter: grayscale(100%); 
+        filter: grayscale(100%);
+          }
+          
+      img.blur {
+        -webkit-filter: blur(10px); 
+          filter: blur(10px);
+          }
+    
+      img.invert {
+        -webkit-filter: invert(); 
+          filter: invert();
+          }
+    
+      img.sepia {
+        -webkit-filter: sepia(); 
+          filter: sepia();
+          }
+    img.brightness {
+        -webkit-filter: brightness(2); 
+          filter: brightness(2);
+          }
+    img.saturate {
+        -webkit-filter: saturate(7); 
+          filter: saturate(7);
+          }
+          
+    img.drop-shadow {
+        -webkit-filter: drop-shadow(8px 8px 10px blue); 
+          filter: drop-shadow(8px 8px 10px blue);
+          }
+    
+    img.contrast {
+        -webkit-filter: contrast(4); 
+          filter: contrast(4);
+          }
+    
+    img.hue-rotate {
+        -webkit-filter: hue-rotate(180deg); 
+          filter: hue-rotate(180deg);
+          }
+    
+    img.opacity {
+        -webkit-filter: opacity(25%); 
+          filter: opacity(25%);
+          }
+    
+    img.variousfilter {
+     -webkit-filter: saturate(6) opacity(50%) brightness(2);  
+          filter: saturate(6) opacity(50%) brightness(2);
+    
+          }
+            
+    
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      background-color: white;
+      padding: 10px;
+    }
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+    
+        h1{
+        font-size : 42px;
+        text-align	: center;
+        
+        }

@@ -5,11 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Form Exercise</title>
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="04-form.css" />
-  </head>
-  <body>
-    <!-- 04 - Form Exercise -->
-    <!-- Add your code below -->
-  </body>
+        <link rel="stylesheet" href="04-form.css" />
+    </head>
+  
+  
+	<body>
+		<!-- 04 - Form Exercise -->
+		<!-- Add your code below -->
+		<table class="center" width=40%>  <!--table center properties are called from 04-form.ccs styling sheet-->
+			<tr>
+				<th>INTRO SURVEY</th>
+			</tr>
+			<tr>
+				<td>
+					<form >
+						<h4>
+							<div> 
+								
+									<label for="Name"><b> Name  <span style="font-size: 14px"><font style="color:#0173a0">(required)</font></span></b>
+									</label>
+									<br>
+									<input required type="text" id="Name" name="Name" value="" size=100%> 
+								
+							</div>
+							<br>
+							<div> 	
+								<label for="Email"><b> Email <span style="font-size: 14px"> <font style="color:#0173a0">(required) </font></span></b>
+								</label> <br>
+								<input required type="email" id="email" name="email" size=100%>
+							</div>
+							<br>
+			 <!--Drop Down starts here  -->
+							<div>
+								<label for="Registration Status">Registration Status
+								</label>
+								<select name="Registration Status" style="width:95%;" border="1px">
+									<option value="Select an Option">Choose an Option</option>
+									<option value="Registered">Registered</option>
+									<option value="Waitlisted">Waitlisted</option>
+									<option value="Dropped">Dropped</option>
+								</select>
+							</div>
+							<!-- Drop down ends here -->
+							<br>
+							<!-- Radio buttio code starts here-->
+							<div>
+								<label for="Class Section">Class Section
+								</label>
+								<br>
+								<input type="radio" id="CP 410P" name="class Section you select" value="CP 410P">
+						  		<label for="html">
+									<span style="font-size: 13px"> CP 410P
+									</span>
+								</label>
+						  		<input type="radio" id="CS 510" name="class Section you select" value="CS 510">
+					  			<label for="css">
+									<span style="font-size: 13px">CS 510
+									</span>
+								</label>
+							</div>
+							<!-- Radio button code ends here-->
+							<br>
+							<!-- Check boxes start here -->
+							Have you taken any of the following courses?
+							<br>
+							<input type="checkbox" id="Programming Languages" name="Programming Languages" value="Programming Languages">
+							<label for="Programming Languages"> 
+								<span style="font-size: 13px">	Programming Languages
+								</span>	
+							</label><br>
+			  
+							<input type="checkbox" id="Operating systems" name="Operating systems" value="Operating systems">
+							<label for="Operating Systems"> 
+								<span style="font-size: 13px">	Operating Systems
+								</span>
+							</label><br>
+			  
+							<input type="checkbox" id="Full Stack Web Development" name="Full Stack Web Development" value="Full Stack Web Development">
+							<label for="Full Stack Web Development">
+								<span style="font-size: 13px">	Full Stack Web Development
+								</span>
+							</label><br>
+						
+		  <!-- Check boxes end Here-->
+							<br>
+							
+		  <!-- Feedback Box starts here-->
+							Anything else? <br>
+							<textarea cols=100% rows="6" value="Anything else?"  size=100%>
+							</textarea> 
+							<!-- Feedback Box ends here-->
+						</h4>
+						<button type="submit" value="Submit" class="button">Submit</button>
+						<button type="reset"  value="Reset" class="button">Reset</button>
+					</form>
+				</td>
+			</tr>
+		</table>
+	
+	 <!-- Citation
+  HTML and CSS- Jon Duckett 
+  https://www.w3schools.com/html/ -->
+	</body>
 </html>
