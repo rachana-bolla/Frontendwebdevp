@@ -1,108 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Form Exercise</title>
+  	<head>
+    	<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    	<title>Form Exercise</title>
         <link rel="stylesheet" href="04-form.css" />
-    </head>
-  
-  
+	</head>  
 	<body>
-		<!-- 04 - Form Exercise -->
-		<!-- Add your code below -->
-		<table class="center" width=40%>  <!--table center properties are called from 04-form.ccs styling sheet-->
-			<tr>
-				<th>INTRO SURVEY</th>
-			</tr>
-			<tr>
-				<td>
-					<form>
-						<h4>
-							<div> 
-								
-								<label for="Name"><b> Name  <span style="font-size: 14px"><font style="color:#0173a0">(required)</font></span></b>
-								</label>
+		<form>
+			<!-- 04 - Form Exercise -->
+			<!-- Add your code below -->
+			<table class="center">  <!--table center properties are called from 04-form.ccs styling sheet-->
+				<tr>
+					<th> <h1>INTRO SURVEY</h1>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<div role="main"> 
+							<fieldset><legend for="name"></legend>
+								<b> Name  <span style="font-size: 14px"><font style="color:#0173a0">(required)</font></span></b>
 								<br>
-								<input required type="text" id="Name" name="Name" value="" size=100%> 
+								<input required type="text" aria-label="Name" id="Name" name="Name" value="" size=53%> 
 								<br><br>
-								<label for="Email"><b> Email <span style="font-size: 14px"> <font style="color:#0173a0">(required) </font></span></b>
-								<br></label> 
-								<input required type="email" id="email" name="email" value="" size=100%>
-
-							</div>
-							<br>
-			 <!--Drop Down starts here  -->
-							<div>
-								<label for="Registration Status">Registration Status
-								</label>
-								<select name="Registration Status" style="width:95%;" border="1px">
+								<b> Email <span style="font-size: 14px"> <font style="color:#0173a0">(required) </font></span></b>
+								<br> 
+								<input required type="email" aria-label="email" id="email" name="email" value="" size=53%>
+							</fieldset>	
+						</div>
+								
+				<!--Drop Down starts here  -->
+						<div>
+							<fieldset border=0px>
+								<legend for="Registration Status" aria-label="Registration"><b>Registration Status:</b>
+								</legend>
+								<select name="Registration Status" style="width:98%;" aria-label="Registration" border="1px">
 									<option value="Select an Option">Choose an Option</option>
 									<option value="Registered">Registered</option>
 									<option value="Waitlisted">Waitlisted</option>
-									<option value="Dropped">Dropped</option>
+									<option value="Dropped">Dropped</option>										
 								</select>
-							</div>
-							<!-- Drop down ends here -->
-							<br>
-							<!-- Radio buttio code starts here-->
-							<div>
-								<label for="Class Section">Class Section
-								</label>
-								<br>
-								<input type="radio" id="CP 410P" name="class Section you select" value="CP 410P">
-						  		<label for="CP 410P">
-									<span style="font-size: 13px"> CP 410P
+							</fieldset>
+						</div>
+								<!-- Drop down ends here -->
+								
+								<!-- Radio buttio code starts here-->
+						<div>
+							<fieldset>
+								<legend for="Class Section"><b>Class Section</b>
+								</legend>
+								<input type="radio" id="CP 410P" aria-label="CP410P" name="class Section you select" value="CP 410P">
+					  			<span style="font-size: 15px">CP 410P</span>	
+								<input type="radio" id="CS 510" aria-label="CP510" name="class Section you select" value="CS 510">
+						  		<span style="font-size: 15px">CS 510</span>
+							</fieldset>
+						</div>
+								<!-- Radio button code ends here-->
+								
+								<!-- Check boxes start here -->
+						<div>
+							<fieldset><!-- fieldset is used to group the set of input variables-->
+								<legend for="courses">
+									Have you taken any of the following courses?
+								</legend>
+								<div>
+									<input type="checkbox" id="Programming Languages" aria-label="Programming" name="Programming Languages" value="Programming Languages">
+									<span style="font-size: 13px">	Programming Languages
+									</span>	
+								</div>
+								<div>
+									<input type="checkbox" id="Operating systems" aria-label="Operating" name="Operating systems" value="Operating systems">
+									<span style="font-size: 13px">	Operating Systems
 									</span>
-								</label>
-						  		<input type="radio" id="CS 510" name="class Section you select" value="CS 510">
-					  			<label for="CS 510 ">
-									<span style="font-size: 13px">CS 510
+								</div>
+								<div>
+									<input type="checkbox" id="Full Stack Web Development" aria-label="Full Stack" name="Full Stack Web Development" value="Full Stack Web Development">
+									<span style="font-size: 13px">	Full Stack Web Development
 									</span>
-								</label>
-							</div>
-							<!-- Radio button code ends here-->
-							<br>
-							<!-- Check boxes start here -->
-							Have you taken any of the following courses?
-							<br>
-							<input type="checkbox" id="Programming Languages" name="Programming Languages" value="Programming Languages">
-							<label for="Programming Languages"> 
-								<span style="font-size: 13px">	Programming Languages
-								</span>	
-							</label><br>
-			  
-							<input type="checkbox" id="Operating systems" name="Operating systems" value="Operating systems">
-							<label for="Operating Systems"> 
-								<span style="font-size: 13px">	Operating Systems
-								</span>
-							</label><br>
-			  
-							<input type="checkbox" id="Full Stack Web Development" name="Full Stack Web Development" value="Full Stack Web Development">
-							<label for="Full Stack Web Development">
-								<span style="font-size: 13px">	Full Stack Web Development
-								</span>
-							</label><br>
-						
-		  <!-- Check boxes end Here-->
-							<br>
+								</div>
+							</fieldset>
+						</div>
+			<!-- Check boxes end Here-->
 							
-		  <!-- Feedback Box starts here-->
-							Anything else? <br>
-							<textarea cols=100% rows="6" value="Anything else?"  size=100%>
-							</textarea> 
-							<!-- Feedback Box ends here-->
-						</h4>
-						<button type="submit" value="Submit" class="button">Submit</button>
-						<button type="reset"  value="Reset" class="button">Reset</button>
-					</form>
-				</td>
-			</tr>
-		</table>
-	
-	 <!-- Citation
-  HTML and CSS- Jon Duckett 
-  https://www.w3schools.com/html/ -->
+			<!-- Feedback Box starts here-->
+						<div>
+							<Fieldset><!-- fieldset is used to group the set of input variables-->
+								<legend for="Anything"><b>Anything else?</b>
+								</legend> 
+								<textarea cols=45% rows="6" value="Anything else?" aria-label="Anything" size=50%>
+								</textarea> 
+								<!-- Feedback Box ends here-->
+								<br> <br>
+								<button type="submit" value="Submit" class="button" aria-label="Submit">Submit</button>
+								<button type="reset"  value="Reset" class="button" aria-label="Reset">Reset</button>
+							</Fieldset>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</form>
+		<!-- Citation
+	HTML and CSS- Jon Duckett 
+	https://www.w3schools.com/html/ -->
 	</body>
 </html>
