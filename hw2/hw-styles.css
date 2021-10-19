@@ -1,9 +1,335 @@
+
+
 /* Code for exercise 02-navbar */
+*{
+	margin :0;
+	padding:0;
+	user-select: none;
+}
 
-/* Code for exercise 03-flex */
+body
+{
+	font-family: 'Poppins',sans-serif;
+}
 
-/* Code for exercise 04-grid */
+h1{
+	text-align: center;
+	}
 
-/* Code for exercise 05-calendar */
 
-/* Code for exercise 06-bootstrap-grid */
+.container  nav.desk,
+.container  nav.mob
+{
+	width:100%;
+	background :   linear-gradient(to right, #003838, #002929, #001414);
+	height: 60px;
+	box-shadow: 0 2px 2px 0 rgb(0,0,0,0.14);
+	position: fixed;
+	top: 0;
+	left: 0;
+	
+}
+
+nav.desk ul
+{
+	list-style: none;
+	width: 75%;
+	height: 60px;
+	margin:0 auto;
+	
+}
+
+nav.desk ul li
+{
+	width: 20%;
+	float: left;
+	text-align: center;
+	line-height: 60px;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+nav ul li:hover
+{
+	background: #004d4d;	
+}
+
+
+nav ul li.active
+{
+	background: #004d4d;	
+}
+
+
+nav ul li a
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+nav.mob
+{
+	display: none;
+}
+
+/*  start Flexbox  */	
+
+.flex-container 
+{
+	display: flex;
+	flex-wrap: wrap;
+	width:100%;
+	background-color: #FFF;
+}
+
+.flex-container > div 
+{
+	background-color: #8b008b;
+	width: 20%;
+	margin: 10px;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	line-height: 75px;
+	font-size: 30px;
+}
+/*  End Flexbox  */	
+
+/* -----start Grid--------  */
+
+nav.mobg
+{
+	display: none;
+}
+
+/*
+	.item1 { grid-area: one; }
+	.item2 { grid-area: two; }
+	.item3 { grid-area: Three; }
+	.item4 { grid-area: four; }
+	.item5 { grid-area: five; }
+	.item6 { grid-area: six; }
+	.item7 { grid-area: Seven; }
+	.item8 { grid-area: Eight; }
+	.item9 { grid-area: nine; }
+	.item10 { grid-area: ten; }
+*/
+
+.item1 { grid-area: 1 / 1 / span 1 / span 2; }
+.item2 { grid-area: 2 / 1 / span 1 / span 1; }
+.item3 { grid-area: 1 / 3 / span 3 / span 3; }
+.item4 { grid-area: 2 / 2 / span 1 / span 1; }
+.item5 { grid-area: 3 / 1 / span 2 / span 2; }
+.item6 { grid-area: 4 / 3 / span 1 / span 1; }
+.item7 { grid-area: 4 / 4 / span 1 / span 1; }
+.item8 { grid-area: 4 / 5 / span 1 / span 1; }
+.item9 { grid-area: 5 / 1 / span 1 / span 1; }
+.item10 { grid-area: 5 / 2 / span 1 / span 4; }
+
+.grid-container {
+
+  display: grid;
+  
+  grid-template-areas: auto auto auto auto auto;
+  
+/*
+ grid-template-areas: 
+    'one   one   three three three'
+    'two   four  three three three'
+    'five  five  three three three'
+    'five  five  six   seven eight'
+    'nine  ten   ten   ten   ten';
+*/
+  grid-gap: 10px;
+  
+  background-color: #fff;
+  padding: 5px;
+}
+
+.grid-container > div {
+  background-color: #8b008b;
+   color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 30px;
+}
+/* -----End Grid--------  */
+
+/*   Start Calendar */
+
+
+.calendar header {
+  display: flex;
+  align-items: center;
+  font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+  justify-content: center;
+  margin-bottom: 2em;
+  background: #000;
+  color: #fff;
+  min-height: 10vh;
+  text-align: center;
+}
+
+.calendar ul, ol {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 1em;
+  margin: 0 auto;
+  max-width: 64em;
+  padding: 0;
+}
+
+.calendar li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-left: 0;
+  font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.calendar ul.weekdays {
+  margin-bottom: 1em;
+}
+
+.calendar ul.weekdays li {
+  height: 4vw;
+}
+
+.calendar ol.day-grid li {
+  background-color: #eaeaea;
+  border: 1px solid #eaeaea;
+  height: 12vw;
+  max-height: 125px;
+}
+
+.calendar ul.weekdays abbr[title] {
+  border: none;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.calendar ol.day-grid li:nth-child(1),
+.calendar ol.day-grid li:nth-child(2),
+.calendar ol.day-grid li:nth-child(3),
+.calendar ol.day-grid li:nth-child(34),
+.calendar ol.day-grid li:nth-child(35) {
+  background-color: #fff;
+}
+
+/* End Calendar  */
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px)
+{
+	nav.desk{
+		display: none;
+	}
+	
+	nav.mob
+	{
+		display: block;
+	}
+	
+   .mob ul
+	{
+	   margin-top: 0px;
+	     background : #364a4b;
+	}
+	
+	.mob li{
+	   text-transform: uppercase;
+	   text-align: center;
+	   padding: 20px;
+	   cursor: pointer;
+	     background : linear-gradient(to right, #003838, #002929, #001414);
+   }
+
+/*  start Flexbox  */	
+	.flex-container div {
+	  background-color: #8b008b;
+	  width: 20%;
+	  margin: 10px;
+	  color: #fff;
+		text-decoration: none;
+	  text-align: center;
+	  line-height: 75px;
+	  font-size: 30px;
+	}
+	
+	/*  End Flexibox  */	
+	
+	
+/*  start Grid  */	
+	nav.deskg{
+		display: none;
+	}
+	
+	nav.mobg
+{
+	display: block;
+}
+
+	.item1 { grid-area: one; }
+	.item2 { grid-area: two; }
+	.item4 { grid-area: four; }
+	.item5 { grid-area: five; }
+	.item6 { grid-area: six; }
+	.item9 { grid-area: nine; }
+	.item10 { grid-area: ten; }
+
+	.grid-container 
+	{
+		display: grid;
+		grid-template-areas:
+			'one one two four'
+			'five five six nine'
+			'five five six nine'
+			'ten ten ten ten';
+		grid-gap: 10px;
+		background-color: #fff;
+		padding: 10px;
+	}
+
+	.grid-container > div 
+	{
+		background-color: #8b008b;
+		color: #fff;
+		text-align: center;
+		padding: 20px 0;
+		font-size: 30px;
+	}
+/*  End Grid  */	
+
+
+/*  Start Calendar  */
+ .calendar ul, ol {
+    grid-gap: .25em;
+  }
+  
+ .calendar ul.weekdays li {
+    font-size: 0;
+  }
+  
+ .calendar ul.weekdays > li abbr:after {
+      content: attr(title);
+      font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+    text-align: center;
+    }
+
+
+/* End Calendar    */
+
+}
+
+
+
