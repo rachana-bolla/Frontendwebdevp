@@ -9,32 +9,99 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
     />
-    <script defer src="03-count.js"></script>
-  </head>
-  <body class="bg-info">
-    <main>
-      <form class="container border rounded bg-light w-50 mx-auto mt-5 p-3">
-        <h1 class="mt-2 mb-4">Count Occurences</h1>
-        <hr />
-        <div class="form-group">
-          <label for="userinput"
-            >Highlight all occurences of a given word in the text below
-          </label>
-          <input type="text" id="userinput" name="input" />
-        </div>
-        <hr />
-        <div id="intro">
-          It was the best of times, it was the worst of times, it was the age of
-          wisdom, it was the age of foolishness, it was the epoch of belief, it
-          was the epoch of incredulity, it was the season of Light, it was the
-          season of Darkness, it was the spring of hope, it was the winter of
-          despair, we had everything before us, we had nothing before us, we
-          were all going direct to Heaven, we were all going direct the other
-          way—in short, the period was so far like the present period, that some
-          of its noisiest authorities insisted on its being received, for good
-          or for evil, in the superlative degree of comparison only.
-        </div>
-      </form>
-    </main>
+   
+   <style type="text/css">
+     *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      
+      }
+    body{
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 30px;
+      background-color: #17A2B8;
+      }  
+   /*   #searchBox{
+        width: 90%;
+        height: 50px;
+        border: 2Px solid #fff;
+        display: flex;
+        flex-flow: row nowrap;
+      
+      }
+    */
+      /*  #input{
+        width: 80%;
+        border: none;
+        outline: none;
+        padding: 0 15px;
+      
+      }
+      #searchBtn{
+      width: 20%;
+      
+      }
+      
+      input{
+        font-size: 20px;
+      
+      }
+      #content{
+        width: 90%;
+        color: #000;
+        font-size: 20px;
+        padding-top: 20px;
+        text-align: justify;
+      }
+*/
+      mark {
+  background-color: yellow;
+  color: black;
+}
+      
+      </style>
+
+      
+ <script defer src="03-count.js"></script>
+ 
+</head>
+<body>
+  
+  <div class="bg-light border rounded w-50 mx-auto mt-5 p-3">
+      <h1 class="mt-2 mb-4">Count occurences </h1>
+      <hr/>
+
+
+        <label class="mt-2 mb-4">
+          Highlight all occurences of a given word in the text below
+       
+          <input type="text" id="input" name="input" value="" placeholder="Search"/>  
+
+        <input type="button" id="SearchBtn" value="Search" onclick="search();"/>
+      </label>
+      <hr />
+      <div id="content" class="form-group">
+        <p id="p" >
+        It was the best of times, it was the worst of times, it was the age of
+        wisdom, it was the age of foolishness, it was the epoch of belief, it
+        was the epoch of incredulity, it was the season of Light, it was the
+        season of Darkness, it was the spring of hope, it was the winter of
+        despair, we had everything before us, we had nothing before us, we
+        were all going direct to Heaven, we were all going direct the other
+        way—in short, the period was so far like the present period, that some
+        of its noisiest authorities insisted on its being received, for good
+        or for evil, in the superlative degree of comparison only.
+        </p>
+      </div>
+    </div>
+  
   </body>
+  
+  <!--citation
+  https://eloquentjavascript.net/18_http.html-->
 </html>
