@@ -13,15 +13,27 @@
   </head>
   <body class="bg-info">
     <form class="bg-light border rounded w-50 mx-auto mt-5 p-3">
-      <h1 class="mt-2 mb-4">String Manipulation</h1>
+      <h1 class="mt-2 mb-4" align=center> Exercise 02 - URL</h1>
       <div class="form-group">
-        <label for="comments">Enter a URL:</label>
-        <textarea class="form-control" id="comments" rows="1"> </textarea>
+        <label>Enter a URL:</label>
+        <textarea class="form-control" id="comments" rows="1" > </textarea>
       </div>
       <div class="form-group mt-4">
-        <input type="button" class="btn btn-info" value="Parse URL" />
+        <input type="button" class="btn btn-info" value="Parse URL" onclick="getParameters()" style="color: rgb(255, 255, 255); background-color: rgb(13, 74, 83);"/>
         <input type="reset" class="btn btn-secondary" value="Reset" />
       </div>
     </form>
+
+    <form class="bg-light border rounded w-50 mx-auto mt-5 p-3">
+      <h1 class="mt-2 mb-4">Results</h1>
+      <div class="form-group">
+        <label for="comments">URL</label>
+        <div>
+        <lable id="results"> </label>
+      </div>
+    </div>
+  </form>
   </body>
+  <!--citation
+  https://eloquentjavascript.net/18_http.html-->
 </html>
