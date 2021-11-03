@@ -15,7 +15,7 @@ function init(){
                 var b = Math.round(Math.random() * 256);
                 var b = Math.round(Math.random() * 256);
     
-                ColorValue = "rgba("+r+","+g+","+b+",0.1)";
+                ColorValue = "rgba("+r+","+g+","+b+",10)";
            
             
 
