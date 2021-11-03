@@ -1,5 +1,4 @@
 function init(){
-
     }
     
     function startStop(){
@@ -8,7 +7,7 @@ function init(){
     moveRight();
     change();
     }
-    
+    //space
     function moveRight(){
     
         var r = Math.floor(Math.random() * 256);
