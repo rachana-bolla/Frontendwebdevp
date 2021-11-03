@@ -1,0 +1,125 @@
+/* Add your code here */
+/* Add your code here */
+
+body{
+    background: #154360;
+     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+     width: auto; height: auto;
+    }
+
+    font{
+      color: #0173a0;
+    }
+    span{
+      font-size: 14px;
+     
+    }
+
+    
+    /*Desktops, big landscape tablets and laptops(Large, Extra large)*/
+    @media screen and (min-width: 1024px){
+         body {
+            background: #154360;
+     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+     width: auto; height: auto;
+        }
+    /*Style*/ 
+    }
+       
+    /*Tablet(medium)*/
+    @media screen and (min-width : 768px) and (max-width : 1023px){
+         body {
+       background: #154360;
+     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+     width: auto; height: auto;
+      }
+    /*Style*/
+    }
+    
+    /* Smartphones (portrait and landscape)(small)*/
+    @media screen and (min-width : 0px) and (max-width : 414px){
+    /*Style*/
+    body{
+    background: #154360;
+     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+     width: auto; height: auto;
+    }
+    }
+    h1 {
+      display: block;
+      font-size: 1em;
+      margin-top: 0.20em;
+      margin-bottom: 0.20em;
+      margin-left: 0;
+      margin-right: 0;
+      font-weight: bold;
+    }
+    
+    div { width: auto; height: auto;}
+    
+      
+    p1
+      {
+        font-size: 37px;
+      }
+      
+    table.center
+      {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      font{
+        color: #0173a0";
+      }
+      span{
+        font-size: 14px;
+       
+      }
+    table 
+      {
+        border-radius : 5px;
+        background : white;
+        border-collapse: collapse;
+        border:0px solid white	;
+      }
+
+    tr
+      {
+        border:0px solid white;
+      }
+
+    td 
+      {
+        text-align: left;
+        border:0px solid black;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+    
+    th
+      {
+        border:0px solid white;
+        padding: 10px;
+        font-size :38px;
+        color : #0173a0;
+      }
+    
+    button
+      {
+        padding: 5% 18%;
+      }
+    
+    button:hover 
+      {
+        background-color:  #154360; 
+        color: white;
+      }
+
+    fieldset 
+      {
+        border: 0px;
+      }  
+    legend 
+      {
+        border: 0px;
+      }

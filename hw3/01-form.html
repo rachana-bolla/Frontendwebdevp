@@ -1,20 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>JavaScript Form Exercise</title>
-    <link rel="stylesheet" href="../styles.css" />
-    <script defer src="01-form.js"></script>
-  </head>
-  <body class="bg-dark text-dark">
-    <main>
-      <h1>Contact Form</h1>
-      <form action="">
-        <!-- Step 1 - Insert your previous form here -->
-        <!-- Step 2 - Address any responsiveness and/or accessibility issues -->
-      </form>
-    </main>
-  </body>
+  	<head>
+    	<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    	<title>Form Exercise</title>
+        <link rel="stylesheet" href="01-form.css" />
+        <script defer src="01-form.js"></script>
+	</head>  
+	<body>
+		<form id="Myform">
+			<!-- 04 - Form Exercise -->
+			<!-- Add your code below -->
+			<table class="center">  <!--table center properties are called from 04-form.ccs styling sheet-->
+				<tr>
+					<th> <h1>INTRO SURVEY</h1>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<div role="main"> 
+							<fieldset><legend for="name"></legend>
+								<b> Name  <span><font >(required)</font></span></b>
+								<br>
+								<input required type="text" aria-label="Name" id="Name" name="Name"  size=53%> 
+								<br><br>
+								<b> Email <span> <font >(required) </font></span></b>
+								<br> 
+								<input required type="email" aria-label="Email" id="Email" name="Email"  size=53%>
+							</fieldset>	
+						</div>
+								
+				<!--Drop Down starts here  -->
+						<div>
+							<fieldset border=0px>
+								<legend for="Registration Status" aria-label="Registration"><b>Registration Status:</b>
+								</legend>
+								<select name="Registration Status" style="width:98%;" aria-label="Registration" border="1px" id="registration">
+									<option value="Select an Option">Choose an Option</option>
+									<option value="Registered">Registered</option>
+									<option value="Waitlisted">Waitlisted</option>
+									<option value="Dropped">Dropped</option>										
+								</select>
+							</fieldset>
+						</div>
+								<!-- Drop down ends here -->
+								
+								<!-- Radio buttio code starts here-->
+						<div>
+							<fieldset id="classopt">
+								<legend for="Class Section"><b>Class Section</b>
+								</legend>
+								<input type="radio" id="classsel" aria-label="CP410P" name="class Section you select" value="CP 410P">
+					  			<span style="font-size: 15px">CP 410P</span>	
+								<input type="radio" id="classsel" aria-label="CP510" name="class Section you select" value="CS 510">
+						  		<span style="font-size: 15px">CS 510</span>
+							</fieldset>
+						</div>
+								<!-- Radio button code ends here-->
+								
+								<!-- Check boxes start here -->
+						<div>
+							<fieldset><!-- fieldset is used to group the set of input variables-->
+								<legend for="courses">
+									Have you taken any of the following courses?
+								</legend>
+								<div>
+									<input type="checkbox" id="courses" aria-label="Programming" name="Programming Languages" value="Programming Languages">
+									<span style="font-size: 13px">	Programming Languages
+									</span>	
+								</div>
+								<div>
+									<input type="checkbox" id="courses" aria-label="Operating" name="Operating systems" value="Operating systems">
+									<span style="font-size: 13px">	Operating Systems
+									</span>
+								</div>
+								<div>
+									<input type="checkbox" id="coureses" aria-label="Full Stack" name="Full Stack Web Development" value="Full Stack Web Development">
+									<span style="font-size: 13px">	Full Stack Web Development
+									</span>
+								</div>
+							</fieldset>
+						</div>
+			<!-- Check boxes end Here-->
+							
+			<!-- Feedback Box starts here-->
+						<div>
+							<Fieldset><!-- fieldset is used to group the set of input variables-->
+								<legend for="Anything"><b>Anything else?</b>
+								</legend> 
+								<textarea id="anyinfo" cols=45% rows="6" value="" aria-label="Anything" size=50%>
+								</textarea> 
+								<!-- Feedback Box ends here-->
+								<br> <br>
+								<button type="submit" value="Submit" class="button" aria-label="Submit" onclick="submitdata()">Submit</button>
+								<button type="reset"  value="Reset" class="button" aria-label="Reset">Reset</button>
+							</Fieldset>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</form>
+		<!-- Citation
+	HTML and CSS- Jon Duckett 
+	https://www.w3schools.com/html/ -->
+	</body>
 </html>
