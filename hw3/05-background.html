@@ -27,8 +27,10 @@
           <input type="text" value="3" id="interval"  />
         </div>
         <div class="form-group mt-4">
-          <input type="button" id="Start" class="btn btn-danger"  value="Start" onclick="counttext()"/>
-          <input type="button" id="Stop" class="btn btn-danger" value="Stop" onclick="Stopcounttext()" /> 
+
+          <input type="button" value="Start" class="btn btn-danger" onclick="startStop()" id="startButton">
+          <input type="button" value="Stop" class="btn btn-danger" onclick="stop()" id="stopButton" hidden>
+
         </div>
       </div>
     </main>
