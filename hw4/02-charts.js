@@ -27,19 +27,92 @@ let borderColors = [
 ];
 
 // URL to Game of Thrones API to fetch all characters
-let url = 'https://thronesapi.com/api/v2/Characters';
+//let url = 'https://thronesapi.com/api/v2/Characters';
+
+let Baratheon=0; 
+let Bolton = 0;
+let Greyjoy = 0;
+let Lannister = 0;
+let Lorathi = 0;
+let Mormont =0;
+let None = 0;
+let stark = 0;
+let Targaryen =0;
+let Tyrell = 0;
+
 
 let renderChart = () => {
-  let donutChart = document.getElementById('donut-chart');
+	
+		fetch("https://thronesapi.com/api/v2/Characters")
+	.then(response => {
+		console.log(response);
+		if(!response.ok){
+			throw Error("Error");
+		}
+		return response.json();
+	})
+	.then(data => {
+	//	console.log(data);
+		
+		for(let i =0;i<data.length;i++){
+		//	console.log(i);
+		//	console.log(data[i].family);
+			if(data[i].family == "House Baratheon"  || data[i].family == "House Lanister"  || data[i].family == "Baratheon"  )
+			{
+				Baratheon++;
+			}
+			else if (data[i].family == "Bolton" )
+			{
+				Bolton++;
+			}
+			else if (data[i].family == "House Greyjoy"  || data[i].family == "Greyjoy" )
+			{
+				Greyjoy++;
+			}
+			else if (data[i].family == "House Lannister"  || data[i].family == "House Lanister"  || data[i].family == "Lannister" )
+			{
+				Lannister++;
+			}
+			else if (data[i].family == "Lorathi"  || data[i].family == "Lorath" )
+			{
+				Lorathi++;
+			}
+			else if (data[i].family == "Mormont" )
+			{
+				Mormont++;
+			}
+			else if (data[i].family == "House Stark"  || data[i].family == "Stark" )
+			{
+				stark++;
+			}
+			else if (data[i].family == "House Targaryen"  || data[i].family == "Targaryan" )
+			{
+				Targaryen++;
+			}
+			else if (data[i].family == "House Tyrell"  || data[i].family == "Tyrell" )
+			{
+				Tyrell++;
+			}
+			else
+			{
+				None++;
+			}	
+		//	console.log(Tyrell);
+	 	}  
+
+  		// let num1 = Baratheon  + Bolton  + Greyjoy  + Lannister  + Lorathi  + Mormont + stark + Targaryen + Tyrell  + None;
+		//	console.log(num1);
+			
+			  let donutChart = document.getElementById('donut-chart');
 
   new Chart(donutChart, {
     type: 'doughnut',
     data: {
-      labels: ['label', 'label', 'label', 'label'],
+      labels: ['Baratheon','Bolton','Greyjoy','Lannister','Lorathi','Mormont','stark','Targaryen','Tyrell','None'],
       datasets: [
         {
           label: 'My First Dataset',
-          data: [1, 12, 33, 5],
+          data: [Baratheon,Bolton,Greyjoy,Lannister,Lorathi,Mormont,stark,Targaryen,Tyrell,None],
           backgroundColor: backgroundColors,
           borderColor: borderColors,
           borderWidth: 1,
@@ -47,6 +120,14 @@ let renderChart = () => {
       ],
     },
   });
+			
+	})
+	.catch(error => {
+		console.log(error);
+	});
+	
+	
+
 };
 
 renderChart();
