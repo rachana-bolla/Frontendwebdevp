@@ -48,7 +48,7 @@ function fetchData(){
 					{
 						for (let i = 0; i < data.length; i=i+1)
 						{
-							col = `<td><img src=${data[i].imageUrl} width="200" height="200" alt=""><br><b>${data[i].fullName}</b><br>${data[i].title}</td>`;
+							col = `<td><img src=${data[i].imageUrl} width="100" height="100" alt=""><br><b>${data[i].fullName}</b><br>${data[i].title}</td>`;
 							table.innerHTML = table.innerHTML + col;
 						}
 					}
