@@ -3,15 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript API Exercise</title>
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="01-characters.css" />
-    <script defer src="01-characters.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exercise 01 - Characters</title>
+  <!--  <link rel="stylesheet" href="characters.css" />  -->
+      <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="01-Characters.css" />
+	
+	<script defer src="01-characters.js"></script>
   </head>
-  <body>
-    <main class="wrapper">
-      <h1>Exercise 01 - Characters</h1>
-      <section class="characters"></section>
-    </main>
+  <body onresize=location.reload(true) class="bg-info">
+  <div><h1><b>Exercise 01 - Characters</b></h1></div>
+ 		<nav class="desk">
+			<br>
+			<table>
+        
+				 <tbody id="myTable" onresize=location.reload(true)>
+			</tbody> 
+			</table>
+		</nav>	
+
+		<nav class="mob">
+			<table >
+				<tbody id="myTable" onresize=location.reload(true)>
+				</tbody> 
+			</table>
+		</nav>
+		
+		
   </body>
 </html>
